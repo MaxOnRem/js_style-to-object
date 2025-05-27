@@ -25,9 +25,9 @@ function convertToObject(sourceString) {
       .map((element) => element.trim()); // and trim both parts
 
     // If we have both property and value, add them to the result object
-    if (propertyPair.length >= 2) {
-      const [property, value] = propertyPair;
+    const [property, value] = propertyPair;
 
+    if (property && value) {
       result[property] = value;
     }
   });
