@@ -27,7 +27,12 @@ function convertToObject(sourceString) {
     // If we have both property and value, add them to the result object
     const [property, value] = propertyPair;
 
-    if (property && value) {
+    // if (property && value) {
+    //   result[property] = value;
+    // }
+
+    // ensure that empty property names are not included
+    if (property !== '' && value) {
       result[property] = value;
     }
   });
